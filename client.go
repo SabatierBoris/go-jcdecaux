@@ -5,7 +5,6 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
-	"fmt"
 
 	"github.com/jingweno/go-sawyer"
 	"github.com/jingweno/go-sawyer/hypermedia"
@@ -35,7 +34,6 @@ func (c *Client) NewRequest(urlStr string) (req *Request, err error) {
 	} else {
 		urlStr += "?apiKey="+c.ApiKey
 	}
-	fmt.Println("URL :",urlStr)
 	req, err = newRequest(c, urlStr)
 	if err != nil {
 		return
