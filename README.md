@@ -49,7 +49,7 @@ func main() {
   fmt.Println(stations)
   fmt.Println(result.Error()) // Should be nil
 
-  stations, result := client.Stations().AllFor("Paris")
+  stations, result = client.Stations().AllFor("Paris")
   fmt.Println(stations)
   fmt.Println(result.Error()) // Should be nil
 
